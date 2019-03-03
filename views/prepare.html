@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
+        <title>{{greeting}}</title>
+        <script src="assets/js/jquery-3.3.1.js"></script>
+        <script src="semantic/semantic.min.js"></script>
+        <script src="assets/js/hls.js"></script>
+		<script src="assets/js/prepare.js"></script>
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    </head>
+    <body>
+		<div id="previewModal" class="ui fullscreen modal nobackground">
+			<div class="content nobackground">
+				<video id="videoPreview" class="centerVideo" autoplay controls></video>
+			</div>
+		</div>
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                <a href="/" class="header item">
+					<img class="logo" src="assets/images/logo.jpg">
+					Reactions Flex
+                </a>
+				<a href="{{uploadURL}}" class="item">Upload</a>
+            </div>
+        </div>
+        <div class="ui main text container">
+            <h1 class="ui header">{{name}}</h1>
+        </div>
+	    <video id="videoReaction" class="centerVideo" controls src="{{reactionSrc}}"></video>
+		<div class="ui main text container">
+			<h4 class="ui header">Episode Scale (%)</h4>
+            <div class="ui labeled slider" id="sliderScale"></div>
+			<h4 class="ui header">Episode Volume (%)</h4>
+			<div class="ui labeled slider" id="sliderVolume"></div>
+			<div id="dropdownWhere" class="ui floating dropdown labeled search icon button">
+				<i class="arrows alternate icon"></i>
+				<span class="text">Position</span>
+				<div class="menu">
+					<div class="item">Left Bottom</div>
+					<div class="item">Left Top</div>
+					<div class="item">Right Bottom</div>
+					<div class="item">Right Top</div>
+				</div>
+			</div>
+			<div class="ui small labeled input">
+				<div class="ui label">
+					RTime
+				</div>
+				<input id="rtime" type="text" placeholder="1:00">
+			</div>
+			<div class="ui small labeled input">
+				<div class="ui label">
+					ETime
+				</div>
+				<input id="etime" type="text" placeholder="0:00">
+			</div>
+			<div class="ui inverted section divider"></div>
+			<div class="ui center aligned grid">
+				<div class="ui large buttons">
+					<button id="buttonTest" class="ui button">Test</button>
+					<div class="or"></div>
+					<button id="buttonProcess" class="ui button">Process</button>
+				</div>
+			</div>
+			<div class="shell-wrap">
+				<p id="consoleTitle" class="shell-top-bar">Remote</p>
+				<ul id="consoleData" class="shell-body">
+					<li>Waiting for command...</li>
+				</ul>
+			</div>
+        </div>
+		
+        <div class="ui inverted vertical footer segment">
+            <div class="ui center aligned container">
+                <div class="ui inverted section divider"></div>
+                <img src="assets/images/logo.jpg" class="ui centered mini logo image">
+                <div class="ui horizontal inverted small divided link list">
+                    <a class="item" href="#">Contact Us</a>
+                    <a class="item" href="#">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

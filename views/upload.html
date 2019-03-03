@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
+        <title>{{greeting}}</title>
+        <script src="assets/js/jquery-3.3.1.js"></script>
+        <script src="semantic/semantic.min.js"></script>
+        <script src="assets/js/hls.js"></script>
+		<script src="assets/js/upload.js"></script>
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    </head>
+    <body>
+        <div class="ui fixed inverted menu" style="z-index: 1000;">
+            <div class="ui container">
+                <a href="/" class="header item">
+                <img class="logo" src="assets/images/logo.jpg">
+                Reactions Flex
+                </a>
+				<a href="{{uploadURL}}" class="item">Upload</a>
+            </div>
+        </div>
+        <div id="main" class="ui main text container">
+            <h1 class="ui header">Upload</h1>
+            <div class="ui two column grid">
+                <div class="column">
+                    <div class="ui card">
+                        <div class="content">
+                            <div class="header">Episode</div>
+                        </div>
+                        <div class="content">
+                            <h4 class="ui sub header">Choose file</h4>
+							
+                            <div class="ui small feed">
+                                <input type="file" id="episodeInput" accept="video/*" name="episode" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui card">
+                        <div class="content">
+                            <div class="header">Reaction</div>
+                        </div>
+                        <div class="content">
+                            <h4 class="ui sub header">Choose file</h4>
+                            <div class="ui small feed">
+                                <input type="file" id="reactionInput" accept="video/*" name="reaction" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="ui inverted section divider"></div>
+			<div id="progress" class="ui progress">
+				<div class="bar">
+					<div class="progress"></div>
+				</div>
+				<div class="label">Progress</div>
+			</div>
+			<button id="uploadButton" class="ui button primary disabled">Upload</button>
+        </div>
+        <div class="ui inverted vertical footer segment">
+            <div class="ui center aligned container">
+                <div class="ui inverted section divider"></div>
+                <img src="assets/images/logo.jpg" class="ui centered mini logo image">
+                <div class="ui horizontal inverted small divided link list">
+                    <a class="item" href="#">Contact Us</a>
+                    <a class="item" href="#">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
