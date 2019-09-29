@@ -14,7 +14,7 @@
 			var video = document.getElementById('video');
 			if (Hls.isSupported()) {
 				var hls = new Hls();
-				hls.loadSource('{{{streamURL}}}');
+				hls.loadSource({{{streamURL}}});
 				hls.attachMedia(video);
 				hls.on(Hls.Events.MANIFEST_PARSED, function() {
 					video.play();
@@ -27,7 +27,7 @@
 			// white-list before a 'canplay' event will be emitted; the last video event that can be reliably listened-for when the URL is not on the white-list is 'loadedmetadata'.
 			else if (video.canPlayType('application/vnd.apple.mpegurl')) {
 				//video.src = './stream_test/stream.m3u8';
-				video.src = '{{{streamURL}}}';
+				video.src = {{{streamURL}}};
 				video.addEventListener('loadedmetadata', function() {
 					video.play();
 				});

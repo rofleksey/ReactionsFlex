@@ -27,7 +27,7 @@ function remoteConsole(cmd, arg) {
 
 $(window).on('load', ()=>{
 	$('#sliderScale').slider({
-		min: 30,
+		min: 20,
 		max: 100,
 		start: 50,
 		step: 5,
@@ -73,6 +73,7 @@ $(window).on('load', ()=>{
 				'scale': epScale,
 				'etime': $('#etime').val() || "0:00",
 				'rtime': $('#rtime').val() || "1:00",
+				'skiptime': $('#skiptime').val() || "0:00",
 				'where': pos,
 				'id': id
 			}
@@ -122,6 +123,7 @@ $(window).on('load', ()=>{
 				'scale': epScale,
 				'etime': $('#etime').val() || "0:00",
 				'rtime': $('#rtime').val() || "1:00",
+				'skiptime': $('#skiptime').val() || "0:00",
 				'where': pos,
 				'id': id
 			}
